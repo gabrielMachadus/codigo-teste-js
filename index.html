@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+<p>Creating a JavaScript object:</p>
+
+<div id="tabela">
+	<table>
+      <thead>
+    	<th>id</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>eyeColor</th>
+      </thead>
+      <tbody id="tbody"> 
+      </tbody>
+    </table>
+</div>
+
+<p id="demo"></p>
+
+<script>
+const lista_pessoas = [{
+  id: 1,
+  firstName: "John 1",
+  lastName: "Doe 1",
+  eyeColor: "blue"
+},
+{
+  firstName: "John 2",
+  lastName: "Doe 2",
+  id: 2,
+  eyeColor: "blue"
+},{
+  firstName: "John 3",
+  lastName: "Doe 3",
+  id: 3,
+  eyeColor: "blue"
+},
+{
+  firstName: "John 4",
+  lastName: "Doe 4",
+  id: 4,
+  eyeColor: "blue"
+}
+,
+{
+  firstName: "John 5",
+  lastName: "Doe 5",
+  id: 5,
+  eyeColor: "blue"
+}];
+
+let lista = document.getElementById("tbody").innerHTML;
+
+for (let indice = 0; indice < lista_pessoas.length; indice++) {
+  
+  lista += "<tr>"
+            +"<td>"+lista_pessoas[indice].id+"</td>"
+            +"<td>"+lista_pessoas[indice].firstName +"</td>"
+            +"<td>"+lista_pessoas[indice].lastName+"</td>"
+            +"<td>"+lista_pessoas[indice].eyeColor+"</td>"
+         +"</tr>"  ;
+
+}
+
+document.getElementById("tbody").innerHTML = lista;
+
+
+</script>
+
+</body>
+</html>
